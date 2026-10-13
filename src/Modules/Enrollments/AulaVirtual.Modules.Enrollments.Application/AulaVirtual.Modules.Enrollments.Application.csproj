@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RootNamespace>AulaVirtual.Modules.Enrollments.Application</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AulaVirtual.Modules.Enrollments.Domain\AulaVirtual.Modules.Enrollments.Domain.csproj" />
+  </ItemGroup>
+</Project>

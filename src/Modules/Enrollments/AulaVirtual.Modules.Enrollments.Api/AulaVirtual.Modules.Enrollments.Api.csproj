@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RootNamespace>AulaVirtual.Modules.Enrollments.Api</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AulaVirtual.Modules.Enrollments.Application\AulaVirtual.Modules.Enrollments.Application.csproj" />
+    <ProjectReference Include="..\AulaVirtual.Modules.Enrollments.Infrastructure\AulaVirtual.Modules.Enrollments.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>

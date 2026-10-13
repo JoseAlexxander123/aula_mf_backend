@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RootNamespace>AulaVirtual.Modules.Attendance.Infrastructure</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AulaVirtual.Modules.Attendance.Application\AulaVirtual.Modules.Attendance.Application.csproj" />
+    <ProjectReference Include="..\AulaVirtual.Modules.Attendance.Domain\AulaVirtual.Modules.Attendance.Domain.csproj" />
+  </ItemGroup>
+</Project>

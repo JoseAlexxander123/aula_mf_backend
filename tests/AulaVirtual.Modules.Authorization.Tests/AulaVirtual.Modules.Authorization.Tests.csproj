@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><IsPackable>false</IsPackable><IsTestProject>true</IsTestProject></PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="xunit" />
+    <PackageReference Include="xunit.runner.visualstudio" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" />
+    <Using Include="Xunit" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Modules\Authorization\AulaVirtual.Modules.Authorization.Api\AulaVirtual.Modules.Authorization.Api.csproj" />
+    <ProjectReference Include="..\..\src\Modules\Auth\AulaVirtual.Modules.Auth.Domain\AulaVirtual.Modules.Auth.Domain.csproj" />
+    <ProjectReference Include="..\..\src\Modules\Courses\AulaVirtual.Modules.Courses.Domain\AulaVirtual.Modules.Courses.Domain.csproj" />
+    <ProjectReference Include="..\..\src\Modules\Users\AulaVirtual.Modules.Users.Application\AulaVirtual.Modules.Users.Application.csproj" />
+    <ProjectReference Include="..\..\src\AulaVirtual.Api\AulaVirtual.Api.csproj" />
+  </ItemGroup>
+</Project>

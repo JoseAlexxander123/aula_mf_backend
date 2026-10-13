@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>AulaVirtual.DevProvisioning</RootNamespace>
+    <UserSecretsId>6f01d671-6d3c-4af2-99c2-b871bfa6235c</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Modules\Auth\AulaVirtual.Modules.Auth.Application\AulaVirtual.Modules.Auth.Application.csproj" />
+    <ProjectReference Include="..\..\src\Modules\Auth\AulaVirtual.Modules.Auth.Infrastructure\AulaVirtual.Modules.Auth.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\src\Modules\Users\AulaVirtual.Modules.Users.Application\AulaVirtual.Modules.Users.Application.csproj" />
+    <ProjectReference Include="..\..\src\Modules\Users\AulaVirtual.Modules.Users.Infrastructure\AulaVirtual.Modules.Users.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>

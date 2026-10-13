@@ -1,0 +1,110 @@
+root = true
+
+# =========================
+# Configuración general
+# =========================
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+
+# =========================
+# C# / .NET
+# =========================
+
+[*.cs]
+
+indent_size = 4
+
+# using
+dotnet_sort_system_directives_first = true
+dotnet_separate_import_directive_groups = false
+
+# this.
+dotnet_style_qualification_for_field = false:suggestion
+dotnet_style_qualification_for_property = false:suggestion
+dotnet_style_qualification_for_method = false:suggestion
+dotnet_style_qualification_for_event = false:suggestion
+
+# Tipos
+dotnet_style_predefined_type_for_locals_parameters_members = true:suggestion
+dotnet_style_predefined_type_for_member_access = true:suggestion
+
+# var
+csharp_style_var_for_built_in_types = true:suggestion
+csharp_style_var_when_type_is_apparent = true:suggestion
+csharp_style_var_elsewhere = false:suggestion
+
+# Expresiones
+dotnet_style_object_initializer = true:suggestion
+dotnet_style_collection_initializer = true:suggestion
+dotnet_style_coalesce_expression = true:suggestion
+dotnet_style_null_propagation = true:suggestion
+
+# Namespaces
+csharp_style_namespace_declarations = file_scoped:suggestion
+
+# using placement
+csharp_using_directive_placement = outside_namespace:suggestion
+
+# llaves
+csharp_prefer_braces = true:suggestion
+
+# expresiones modernas
+csharp_style_expression_bodied_methods = false:suggestion
+csharp_style_expression_bodied_properties = true:suggestion
+
+# Pattern matching
+csharp_style_prefer_pattern_matching = true:suggestion
+csharp_style_prefer_not_pattern = true:suggestion
+
+# modificadores
+dotnet_style_require_accessibility_modifiers = for_non_interface_members:suggestion
+
+# =========================
+# Convenciones de nombres C#
+# =========================
+
+# Interfaces con I
+dotnet_naming_rule.interfaces_should_start_with_i.severity = suggestion
+dotnet_naming_rule.interfaces_should_start_with_i.symbols = interfaces
+dotnet_naming_rule.interfaces_should_start_with_i.style = prefix_i
+
+dotnet_naming_symbols.interfaces.applicable_kinds = interface
+
+dotnet_naming_style.prefix_i.required_prefix = I
+dotnet_naming_style.prefix_i.capitalization = pascal_case
+
+# Tipos en PascalCase
+dotnet_naming_rule.types_should_be_pascal_case.severity = suggestion
+dotnet_naming_rule.types_should_be_pascal_case.symbols = types
+dotnet_naming_rule.types_should_be_pascal_case.style = pascal_case
+
+dotnet_naming_symbols.types.applicable_kinds = class, struct, interface, enum
+
+dotnet_naming_style.pascal_case.capitalization = pascal_case
+
+# =========================
+# TypeScript / JavaScript
+# =========================
+
+[*.{ts,tsx,js,jsx}]
+indent_size = 2
+quote_type = single
+
+# =========================
+# JSON / YAML
+# =========================
+
+[*.{json,yml,yaml}]
+indent_size = 2
+
+# =========================
+# Markdown
+# =========================
+
+[*.md]
+trim_trailing_whitespace = false

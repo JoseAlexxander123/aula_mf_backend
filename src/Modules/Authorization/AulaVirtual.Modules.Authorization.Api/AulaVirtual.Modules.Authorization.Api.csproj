@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><RootNamespace>AulaVirtual.Modules.Authorization.Api</RootNamespace></PropertyGroup>
+  <ItemGroup><FrameworkReference Include="Microsoft.AspNetCore.App" /></ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Asp.Versioning.Mvc" />
+    <ProjectReference Include="..\AulaVirtual.Modules.Authorization.Application\AulaVirtual.Modules.Authorization.Application.csproj" />
+    <ProjectReference Include="..\AulaVirtual.Modules.Authorization.Infrastructure\AulaVirtual.Modules.Authorization.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>

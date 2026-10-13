@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RootNamespace>AulaVirtual.Modules.Auth.Api</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Asp.Versioning.Mvc" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AulaVirtual.Modules.Auth.Application\AulaVirtual.Modules.Auth.Application.csproj" />
+    <ProjectReference Include="..\AulaVirtual.Modules.Auth.Infrastructure\AulaVirtual.Modules.Auth.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>

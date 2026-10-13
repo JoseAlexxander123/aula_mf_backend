@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <RootNamespace>AulaVirtual.Api</RootNamespace>
+    <UserSecretsId>6f01d671-6d3c-4af2-99c2-b871bfa6235c</UserSecretsId>
+    <!-- Asp.Versioning.OpenApi is not an approved dependency; v1 uses Microsoft.AspNetCore.OpenApi directly. -->
+    <NoWarn>$(NoWarn);AV0029;AV0030</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SharedKernel\AulaVirtual.SharedKernel.Infrastructure\AulaVirtual.SharedKernel.Infrastructure.csproj" />
+    <PackageReference Include="Asp.Versioning.Mvc" />
+    <PackageReference Include="Asp.Versioning.Mvc.ApiExplorer" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" />
+    <PackageReference Include="Scalar.AspNetCore" />
+    <PackageReference Include="Serilog.AspNetCore" />
+    <PackageReference Include="Serilog.Sinks.Console" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Modules\Auth\AulaVirtual.Modules.Auth.Api\AulaVirtual.Modules.Auth.Api.csproj" />
+    <ProjectReference Include="..\Modules\Authorization\AulaVirtual.Modules.Authorization.Api\AulaVirtual.Modules.Authorization.Api.csproj" />
+    <ProjectReference Include="..\Modules\Users\AulaVirtual.Modules.Users.Api\AulaVirtual.Modules.Users.Api.csproj" />
+    <ProjectReference Include="..\Modules\Courses\AulaVirtual.Modules.Courses.Api\AulaVirtual.Modules.Courses.Api.csproj" />
+    <ProjectReference Include="..\Modules\Enrollments\AulaVirtual.Modules.Enrollments.Api\AulaVirtual.Modules.Enrollments.Api.csproj" />
+    <ProjectReference Include="..\Modules\Exams\AulaVirtual.Modules.Exams.Api\AulaVirtual.Modules.Exams.Api.csproj" />
+    <ProjectReference Include="..\Modules\Attendance\AulaVirtual.Modules.Attendance.Api\AulaVirtual.Modules.Attendance.Api.csproj" />
+    <ProjectReference Include="..\Modules\Certificates\AulaVirtual.Modules.Certificates.Api\AulaVirtual.Modules.Certificates.Api.csproj" />
+  </ItemGroup>
+</Project>

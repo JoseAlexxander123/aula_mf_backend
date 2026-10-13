@@ -1,0 +1,3 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><RootNamespace>AulaVirtual.Modules.Authorization.Domain</RootNamespace></PropertyGroup>
+</Project>

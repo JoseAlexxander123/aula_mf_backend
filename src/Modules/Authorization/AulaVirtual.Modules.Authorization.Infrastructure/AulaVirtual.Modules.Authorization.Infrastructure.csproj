@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><RootNamespace>AulaVirtual.Modules.Authorization.Infrastructure</RootNamespace></PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" PrivateAssets="all" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" />
+    <ProjectReference Include="..\AulaVirtual.Modules.Authorization.Application\AulaVirtual.Modules.Authorization.Application.csproj" />
+    <ProjectReference Include="..\AulaVirtual.Modules.Authorization.Domain\AulaVirtual.Modules.Authorization.Domain.csproj" />
+  </ItemGroup>
+</Project>

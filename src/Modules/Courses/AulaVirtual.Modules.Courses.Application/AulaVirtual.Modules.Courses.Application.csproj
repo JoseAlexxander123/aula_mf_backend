@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RootNamespace>AulaVirtual.Modules.Courses.Application</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
+    <ProjectReference Include="..\AulaVirtual.Modules.Courses.Domain\AulaVirtual.Modules.Courses.Domain.csproj" />
+    <ProjectReference Include="..\..\..\SharedKernel\AulaVirtual.SharedKernel.Application\AulaVirtual.SharedKernel.Application.csproj" />
+    <ProjectReference Include="..\..\Users\AulaVirtual.Modules.Users.Application\AulaVirtual.Modules.Users.Application.csproj" />
+  </ItemGroup>
+</Project>

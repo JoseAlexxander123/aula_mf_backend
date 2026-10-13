@@ -1,0 +1,43 @@
+# .NET output and publish artifacts
+[Bb]in/
+[Oo]bj/
+/publish/
+TestResults/
+coverage/
+artifacts/
+*.user
+*.suo
+*.PublishSettings
+
+# Local configuration, credentials and backups
+.env
+.env.*
+!.env.example
+*.local
+appsettings.Local.json
+appsettings.Staging.json
+appsettings.Production.json
+appsettings.*.local.json
+secrets.json
+*.dpapi
+*.pfx
+*.p12
+*.pem
+*.key
+*.bak
+*.dump
+*.db
+*.sqlite
+
+# IDE, logs and temporary files
+.vs/
+.vscode/
+.idea/
+[Ll]og/
+[Ll]ogs/
+*.log
+*.tmp
+*.temp
+*.cache
+.DS_Store
+Thumbs.db

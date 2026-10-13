@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RootNamespace>AulaVirtual.Modules.Courses.Api</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Asp.Versioning.Mvc" />
+    <ProjectReference Include="..\..\Authorization\AulaVirtual.Modules.Authorization.Application\AulaVirtual.Modules.Authorization.Application.csproj" />
+    <ProjectReference Include="..\AulaVirtual.Modules.Courses.Application\AulaVirtual.Modules.Courses.Application.csproj" />
+    <ProjectReference Include="..\AulaVirtual.Modules.Courses.Infrastructure\AulaVirtual.Modules.Courses.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>

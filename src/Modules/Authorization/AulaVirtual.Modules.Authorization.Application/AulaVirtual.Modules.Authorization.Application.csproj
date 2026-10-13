@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><RootNamespace>AulaVirtual.Modules.Authorization.Application</RootNamespace></PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AulaVirtual.Modules.Authorization.Domain\AulaVirtual.Modules.Authorization.Domain.csproj" />
+    <ProjectReference Include="..\..\Users\AulaVirtual.Modules.Users.Application\AulaVirtual.Modules.Users.Application.csproj" />
+  </ItemGroup>
+</Project>

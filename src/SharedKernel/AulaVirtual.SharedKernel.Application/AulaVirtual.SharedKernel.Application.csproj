@@ -1,0 +1,5 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RootNamespace>AulaVirtual.SharedKernel.Application</RootNamespace>
+  </PropertyGroup>
+</Project>

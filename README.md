@@ -21,6 +21,30 @@ dotnet run --project src/AulaVirtual.Api/AulaVirtual.Api.csproj
 
 Configura conexiones, JWT y Storage mediante variables de entorno, User Secrets o un mecanismo seguro del entorno. No coloques credenciales en archivos versionados. Los `appsettings*.json` incluidos son configuración de base, no plantillas para guardar secretos reales.
 
+Sin .NET instalado, o para no configurar nada a mano, usa Docker: copia `.env.example` a `.env` y sigue [docker/README.md](docker/README.md) (PostgreSQL + migraciones + API en `http://localhost:5087`, y cuentas de prueba con el perfil `tools`).
+
+## Configuración
+
+Las dos primeras son imprescindibles: sin ellas la API falla al arrancar o en la primera petición. docker-compose las arma a partir de `.env`.
+
+| Variable | Obligatoria | Qué es |
+|---|---|---|
+| `ConnectionStrings__DefaultConnection` | Sí | Cadena de conexión a PostgreSQL |
+| `Authentication__Jwt__SigningKey` | Sí | Clave de firma de los JWT (32+ caracteres) |
+| `Cors__AllowedOrigins__0` | No | Origen permitido (en Development ya incluye `http://localhost:5173`) |
+| `Authentication__*` | No | Duración de tokens, bloqueo y rate limit; valores por defecto en `appsettings.json` |
+| `Storage__R2__Enabled` | No | `true` para activar el almacenamiento R2 (por defecto `false`) |
+| `Storage__R2__Endpoint` | Si R2 | URL HTTPS del endpoint S3 de R2 |
+| `Storage__R2__AccessKeyId` · `Storage__R2__SecretAccessKey` | Si R2 | Credenciales de R2 |
+| `Storage__R2__PublicBucket` · `Storage__R2__PrivateBucket` | Si R2 | Buckets distintos para archivos públicos y privados |
+| `Storage__R2__PublicBaseUrl` | No | URL HTTPS pública del bucket público |
+| `Storage__R2__AllowedContentTypes__0`, `__1`… | Si R2 | Tipos MIME permitidos (al menos uno) |
+| `Storage__R2__MaxBackendUploadBytes` · `Storage__R2__MaxDirectUploadBytes` | Si R2 | Tamaño máximo de subida, mayor que 0 |
+| `Storage__R2__MaxPresignedUrlSeconds` | Si R2 | Vigencia de las URL firmadas (1 a 604800) |
+| `Courses__Cover__MaxBytes` · `Courses__Cover__AllowedContentTypes__0`… | No | Límites de portadas (por defecto 5 MB; jpeg, png, webp) |
+
+Con `Storage__R2__Enabled=true` y algún dato inválido, la API falla al arrancar.
+
 ## Estructura
 
 - `src/AulaVirtual.Api/`: host HTTP.
